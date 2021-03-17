@@ -1,4 +1,6 @@
 # Calendar Widget - IOS.
+<img src = "sc/1.png" width ="200" /> <img src = "sc/2.png" width ="200" />
+<img src = "sc/2.png" width ="200" /> <img src = "sc/3.png" width ="200" />
 
 ## How does it work: 
 HostApp is the folder that has most of the logic for the app and 
