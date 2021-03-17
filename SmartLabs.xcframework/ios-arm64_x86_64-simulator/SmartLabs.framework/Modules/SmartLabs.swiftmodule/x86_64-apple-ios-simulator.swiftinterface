@@ -1,0 +1,30 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SmartLabs
+@_exported import SmartLabs
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import WidgetKit
+@objc @_inheritsConvenienceInitializers open class WidgetConfigurator : ObjectiveC.NSObject {
+  public static let isLicenseVerified: Swift.Bool
+  public static func configure(purchaseCode code: Swift.String)
+  public enum WidgetDataType : Swift.String {
+    case font, textColor, textAlignment, gradient, image, appGroupId, custom
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  open func updateTextAlignment(index: Swift.Int, saveConfigurations: Swift.Bool = true)
+  open func updateWidgetConfigurations(data: [SmartLabs.WidgetConfigurator.WidgetDataType : Any]? = nil)
+  open func retrieveWidgetConfigurations(appGroupId: Swift.String)
+  open func configure(data: [SmartLabs.WidgetConfigurator.WidgetDataType : Any])
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension SmartLabs.WidgetConfigurator.WidgetDataType : Swift.Equatable {}
+extension SmartLabs.WidgetConfigurator.WidgetDataType : Swift.Hashable {}
+extension SmartLabs.WidgetConfigurator.WidgetDataType : Swift.RawRepresentable {}

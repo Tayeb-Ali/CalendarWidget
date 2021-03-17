@@ -1,0 +1,6 @@
+framework module UnsplashPhotoPicker {
+  umbrella header "UnsplashPhotoPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

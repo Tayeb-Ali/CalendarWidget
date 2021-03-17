@@ -1,0 +1,11 @@
+framework module SmartLabs {
+  umbrella header "SmartLabs.h"
+
+  export *
+  module * { export * }
+}
+
+module SmartLabs.Swift {
+    header "SmartLabs-Swift.h"
+    requires objc
+}
